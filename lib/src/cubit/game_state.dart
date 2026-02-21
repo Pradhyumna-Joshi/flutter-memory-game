@@ -15,6 +15,8 @@ final class GameInProgress extends GameState {
   final int count;
   final int moves;
   final int pairs;
+  final int totalPairs;
+  final GameTheme theme;
   final List<Game> items;
 
   const GameInProgress({
@@ -23,6 +25,8 @@ final class GameInProgress extends GameState {
     this.count = 0,
     this.moves = 0,
     this.pairs = 0,
+    this.totalPairs = 8,
+    this.theme = GameTheme.halloween,
     required this.items,
   });
 
@@ -32,6 +36,8 @@ final class GameInProgress extends GameState {
     int? count,
     int? moves,
     int? pairs,
+    int? totalPairs,
+    GameTheme? theme,
     List<Game>? items,
   }) {
     return GameInProgress(
@@ -40,6 +46,8 @@ final class GameInProgress extends GameState {
       count: count ?? this.count,
       moves: moves ?? this.moves,
       pairs: pairs ?? this.pairs,
+      totalPairs: totalPairs ?? this.totalPairs,
+      theme: theme ?? this.theme,
       items: items ?? this.items,
     );
   }

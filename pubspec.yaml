@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   bloc: ^9.1.0
   flutter_bloc: ^9.1.1
+  confetti: ^0.8.0
 
 dev_dependencies:
   flutter_test:
@@ -60,7 +61,9 @@ flutter:
 
   assets:
     - assets/ # This only sees files directly in assets/
-    - assets/halloween/ # This is REQUIRED to see vampire.png:w
+    - assets/halloween/
+    - assets/sports/
+    - assets/fruits/
 
 
   # To add assets to your application, add an assets section, like this:

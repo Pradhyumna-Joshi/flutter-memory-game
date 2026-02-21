@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:memory_game/src/cubit/game_cubit.dart';
-import 'package:memory_game/src/screens/home.dart';
+import 'package:memory_game/src/screens/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,9 +16,10 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => GameCubit(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-        home: Home(),
+        home: const SplashScreen(),
       ),
     );
   }
